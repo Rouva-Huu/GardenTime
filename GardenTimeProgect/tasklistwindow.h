@@ -4,14 +4,14 @@
 #include <QDialog>
 #include <QTableWidget>
 #include <QPushButton>
-#include <QString>
 #include <QToolBar>
+#include <QAction>
 
 class TaskListWindow : public QDialog {
     Q_OBJECT
 
 public:
-    explicit TaskListWindow(const QString &type, QWidget *parent = nullptr);
+    TaskListWindow(const QString &type, const QString &username, QWidget *parent = nullptr);
 
 private slots:
     void loadTasks();
@@ -21,13 +21,15 @@ private slots:
 
 private:
     int getSelectedTaskId();
-    QToolBar *toolBar;
-    QAction *saveToFileAction;
+
     QString taskType;
+    QString currentUser;
     QTableWidget *taskTable;
     QPushButton *editButton;
     QPushButton *deleteButton;
     QPushButton *closeButton;
+    QToolBar *toolBar;
+    QAction *saveToFileAction;
 };
 
 #endif // TASKLISTWINDOW_H

@@ -3,10 +3,7 @@
         <file>img/icon.png</file>
         <file>img/arrow_left.png</file>
         <file>img/arrow_right.png</file>
-        <file>img/home.png</file>
         <file>img/icon2.png</file>
-        <file>img/profile.png</file>
-        <file>img/ring.png</file>
         <file>img/cactus.png</file>
         <file>img/cherry.png</file>
         <file>img/grapes.png</file>
@@ -31,8 +28,22 @@
         <file>img/paprika.png</file>
         <file>img/pear.png</file>
         <file>img/potato.png</file>
+        <file>img/user.png</file>
+        <file>img/banana.png</file>
+        <file>img/broccoli.png</file>
+        <file>img/garlic.png</file>
+        <file>img/lotus.png</file>
+        <file>img/orange.png</file>
+        <file>img/pineapple.png</file>
+        <file>img/pumpkin.png</file>
     </qresource>
     <qresource prefix="/qss">
         <file>styles.qss</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file>Itim.ttf</file>
+        <file>Pixy.ttf</file>
+        <file>RESurFoxes.ttf</file>
+        <file>Fixedsys.ttf</file>
     </qresource>
 </RCC>

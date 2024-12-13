@@ -11,16 +11,16 @@ CONFIG += c++17
 SOURCES += \
     catalogwindow.cpp \
     eventdialog.cpp \
+    logindialog.cpp \
     main.cpp \
     mainwindow.cpp \
-    registerdialog.cpp \
     tasklistwindow.cpp
 
 HEADERS += \
     catalogwindow.h \
     eventdialog.h \
+    logindialog.h \
     mainwindow.h \
-    registerdialog.h \
     tasklistwindow.h
 
 FORMS += \

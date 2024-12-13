@@ -4,27 +4,22 @@
 #include <QDialog>
 #include <QDate>
 #include <QComboBox>
-#include <QTextEdit>
 #include <QPushButton>
+#include <QTextEdit>
 
-class QDateEdit;
-class QLineEdit;
-
-class EventDialog : public QDialog
-{
+class EventDialog : public QDialog {
     Q_OBJECT
 
 public:
-    explicit EventDialog(const QDate &date, QWidget *parent = nullptr);
-
-private slots:
-    void saveEvent();
+    EventDialog(const QDate &date, const QString &username, QWidget *parent = nullptr);
 
 private:
     void setupUI();
+    void saveEvent();
 
-    int currentUserId;
     QDate eventDate;
+    QString currentUser; // Поле для хранения имени пользователя
+
     QComboBox *typeComboBox;
     QTextEdit *descriptionEdit;
     QPushButton *saveButton;

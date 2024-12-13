@@ -3,8 +3,8 @@
 #include <QMessageBox>
 #include <QSqlQuery>
 
-EventDialog::EventDialog(const QDate &date, QWidget *parent)
-    : QDialog(parent), eventDate(date) {
+EventDialog::EventDialog(const QDate &date, const QString &username, QWidget *parent)
+    : QDialog(parent), eventDate(date), currentUser(username) {
     setupUI();
     resize(280, 240);
 }
@@ -59,11 +59,12 @@ void EventDialog::saveEvent() {
     }
 
     QSqlQuery query;
-    query.prepare("INSERT INTO tasks (date, type, description) "
-                  "VALUES (:date, :type, :description)");
+    query.prepare("INSERT INTO tasks (date, type, description, username) "
+                  "VALUES (:date, :type, :description, :username)");
     query.bindValue(":date", dateString);
     query.bindValue(":type", type);
     query.bindValue(":description", description);
+    query.bindValue(":username", currentUser);
 
     if (query.exec()) {
         accept();

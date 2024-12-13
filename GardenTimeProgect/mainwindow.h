@@ -24,15 +24,18 @@ private slots:
     void showTasks();
     void showEvents();
     void showCatalog();
+    void showHelp();
 
 private:
     void setupDatabase();
     Ui::MainWindow *ui;
     QSqlDatabase db;
-    QPushButton *catalogButton;
     QCalendarWidget *calendar;
     QPushButton *tasksButton;
     QPushButton *eventsButton;
+    QPushButton *catalogButton;
+    QPushButton *helpButton;
+    QString loggedInUser;
 };
 
 #endif // MAINWINDOW_H

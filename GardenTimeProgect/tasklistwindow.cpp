@@ -11,8 +11,8 @@
 #include <QTextStream>
 #include <QFileDialog>
 
-TaskListWindow::TaskListWindow(const QString &type, QWidget *parent)
-    : QDialog(parent), taskType(type), taskTable(new QTableWidget(this)),
+TaskListWindow::TaskListWindow(const QString &type, const QString &username, QWidget *parent)
+    : QDialog(parent), taskType(type), currentUser(username), taskTable(new QTableWidget(this)),
     editButton(new QPushButton("Редактировать", this)),
     deleteButton(new QPushButton("Удалить", this)),
     closeButton(new QPushButton("Закрыть", this)) {
@@ -64,9 +64,9 @@ TaskListWindow::TaskListWindow(const QString &type, QWidget *parent)
 
 void TaskListWindow::loadTasks() {
     QSqlQuery query;
-    QString queryString = "SELECT id, date, description FROM tasks WHERE type = :type ORDER BY date ASC";
-    query.prepare(queryString);
+    query.prepare("SELECT id, date, description FROM tasks WHERE type = :type AND username = :username ORDER BY date ASC");
     query.bindValue(":type", taskType == "tasks" ? "Задача" : "Событие");
+    query.bindValue(":username", currentUser);
 
     if (!query.exec()) {
         QMessageBox::critical(this, "Ошибка", "Не удалось загрузить данные из базы данных.");
@@ -161,7 +161,7 @@ void TaskListWindow::editTask() {
     QString description = query.value("description").toString();
 
     // Открываем диалог редактирования
-    EventDialog dialog(date, this);
+    EventDialog dialog(date, currentUser,this);
     if (taskTypeString == "Задача")
         dialog.setWindowTitle("Редактировать задачу");
     else
