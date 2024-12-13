@@ -1,0 +1,12 @@
+release/catalogwindow.o
+release/eventdialog.o
+release/main.o
+release/mainwindow.o
+release/registerdialog.o
+release/tasklistwindow.o
+release/qrc_resources.o
+release/moc_catalogwindow.o
+release/moc_eventdialog.o
+release/moc_mainwindow.o
+release/moc_registerdialog.o
+release/moc_tasklistwindow.o

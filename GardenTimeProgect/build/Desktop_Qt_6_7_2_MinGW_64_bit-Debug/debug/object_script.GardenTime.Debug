@@ -1,0 +1,12 @@
+debug/catalogwindow.o
+debug/eventdialog.o
+debug/main.o
+debug/mainwindow.o
+debug/registerdialog.o
+debug/tasklistwindow.o
+debug/qrc_resources.o
+debug/moc_catalogwindow.o
+debug/moc_eventdialog.o
+debug/moc_mainwindow.o
+debug/moc_registerdialog.o
+debug/moc_tasklistwindow.o

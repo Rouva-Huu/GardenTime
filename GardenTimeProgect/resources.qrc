@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/icon.png</file>
+        <file>img/arrow_left.png</file>
+        <file>img/arrow_right.png</file>
+        <file>img/home.png</file>
+        <file>img/icon2.png</file>
+        <file>img/profile.png</file>
+        <file>img/ring.png</file>
+        <file>img/cactus.png</file>
+        <file>img/cherry.png</file>
+        <file>img/grapes.png</file>
+        <file>img/raspberry.png</file>
+        <file>img/strawberry.png</file>
+        <file>img/sunflower.png</file>
+        <file>img/apple.png</file>
+        <file>img/beet.png</file>
+        <file>img/carrot.png</file>
+        <file>img/corn.png</file>
+        <file>img/peach.png</file>
+        <file>img/plum.png</file>
+        <file>img/radish.png</file>
+        <file>img/rose.png</file>
+        <file>img/tomato.png</file>
+        <file>img/avocado.png</file>
+        <file>img/cabbage.png</file>
+        <file>img/cucumber.png</file>
+        <file>img/eggplant.png</file>
+        <file>img/kiwi.png</file>
+        <file>img/onion.png</file>
+        <file>img/paprika.png</file>
+        <file>img/pear.png</file>
+        <file>img/potato.png</file>
+    </qresource>
+    <qresource prefix="/qss">
+        <file>styles.qss</file>
+    </qresource>
+</RCC>

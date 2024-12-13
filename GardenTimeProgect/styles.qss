@@ -1,0 +1,56 @@
+/* Общие стили для приложения */
+QWidget {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Стили для кнопок */
+QPushButton {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+QPushButton:hover {
+    background-color: #558741;
+}
+QPushButton:pressed {
+    background-color: #314E26;
+}
+
+/* Стили для календаря */
+QCalendarWidget QToolButton {
+    padding: 4px 8px;
+}
+QCalendarWidget QToolButton:hover {
+    background-color: #558741;
+}
+
+/* Стили для задач/событий */
+QComboBox {
+    padding: 8px 8px;
+    font-size: 14px;
+}
+QComboBox QAbstractItemView::item {
+    padding: 4px;
+    font-size: 14px;
+}
+
+/* Стили для каталога */
+QListWidget {
+    font-size: 14px;
+    padding: 5px;
+}
+QListWidget::item {
+    margin: 2px;
+    padding: 4px;
+}
+
+/* Стили для поиска */
+QLineEdit {
+    margin: 4px;
+    padding: 4px;
+}
+
+QAction {
+    margin: 2px;
+    padding: 4px;
+}
